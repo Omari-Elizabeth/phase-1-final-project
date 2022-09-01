@@ -6,3 +6,8 @@
     background-repeat: no-repeat; 
     background-size: cover;
 }
+.contentDiv{
+    margin: 25px;
+    background-color: white;
+    border-radius: 15px; 
+}
