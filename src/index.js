@@ -10,3 +10,12 @@ fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/compl
 	.then(response => response.json())
 	.then(data => console.log(data))
 	.catch(err => console.error(err));
+
+const getRecipe = document.getElementById("submit")
+
+function submit(){
+    getRecipe.addEventListener("click", (event)=>{
+        event.preventDefault()
+    });
+}
+    submit()
