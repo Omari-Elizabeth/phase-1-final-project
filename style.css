@@ -32,22 +32,15 @@
 #food-main{
     width: 600px;
 }
-/* #dinner{
-    height: auto;
-    width: 100px;
-}
-.plate2{
-    width: 150px;
-}
-.plate3{
-    width: 150px;
-} */
-
 
 .variety{
-    margin-top: 55px;
+    margin-top: 75px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+}
+#plate{
+    width: 130px;
 }
 h1{
     padding: 50px;
@@ -55,7 +48,7 @@ h1{
     font-size: xx-large;
 }
 nav{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 button{
     border: none;
