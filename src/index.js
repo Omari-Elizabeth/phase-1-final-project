@@ -16,5 +16,10 @@ fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/compl
 
 	// Prevent submit default & get user's recipe request
 
-formSubmit.addEventListener('submit', (e) =>{e.preventDefault()})
-	
+formSubmit.addEventListener('submit', (getRecipeRequest))
+
+function getRecipeRequest (e){
+	e.preventDefault()
+	const requestValue = userInput.value
+	console.log(requestValue)
+}
