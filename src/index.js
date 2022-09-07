@@ -18,8 +18,9 @@ fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/compl
 
 formSubmit.addEventListener('submit', (getRecipeRequest))
 
-function getRecipeRequest (e){
-	e.preventDefault()
+function getRecipeRequest (data){
+	data.preventDefault()
 	const requestValue = userInput.value
 	console.log(requestValue)
+	data.target.reset()
 }
