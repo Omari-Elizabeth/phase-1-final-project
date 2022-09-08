@@ -19,8 +19,14 @@ const options = {
 		'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
 	}
 };
-
-
+async function fetchApi(){
+	const response = await fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/menuItems/search?query=pasta&offset=0&number=10&minCalories=0&maxCalories=5000&minProtein=0&maxProtein=100&minFat=0&maxFat=100&minCarbs=0&maxCarbs=100', options)
+	const data = await response.json()
+	console.log(data.menuItems)
+	// .then(response => response.json())
+	// .then(response => console.log(response))
+	// .catch(err => console.error(err));
+}
 
 
 
