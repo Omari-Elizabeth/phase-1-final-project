@@ -23,12 +23,20 @@ async function fetchApi(){
 	const response = await fetch('https://edamam-recipe-search.p.rapidapi.com/search?q=fish', options)
 	const data = await response.json()
 	getRecipeResponse(data.hits)
-	console.log(data.hits)
+	console.log(data)
 }
-function getRecipeResponse(){
-
+function getRecipeResponse(response){
+	response.map(result => {
+		function displayIngredients(){
+			commentsList.innerHTML = '';
+			comments.forEach(element => {
+				const li = document.createElement('li')
+				li.textContent = element.content
+				commentsList.appendChild(li);
+			});   
+		}
+	})
 }
-
 
 
 
