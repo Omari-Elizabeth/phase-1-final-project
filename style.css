@@ -71,3 +71,7 @@ label{
     font-size: 22px;
     font-weight: bold;
 }
+div#ingredients{
+    /* display: none; */
+    overflow: scroll;
+}
