@@ -27,6 +27,7 @@ async function fetchRecipes() {
 	await fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${requestValue}`, options)
 		.then((response) => response.json())
 		.then(function (response) {
+			removeElement();
 	        let a = response.results
 	        a.forEach(x => {
 	            addToHtml(ul, 'h4', x.name)
@@ -77,3 +78,8 @@ function displayRecipe(){
 	// addToHtml(ul, 'P', b[c])
 }
 
+function removeElement(myNode = ul){
+	while (myNode.lastElementChild) {
+	  myNode.removeChild(myNode.lastElementChild);
+	}
+  }
