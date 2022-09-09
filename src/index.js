@@ -2,47 +2,49 @@ const userInput = document.getElementById("enterIngredient");
 const formSubmit = document.querySelector('form');
 const ul = document.querySelector('#ingredients')
 const ol = document.querySelector('#recipeProcess')
-let requestValue = userInput.value
 
-// const ol = document.querySelector('ingredients');
-	// Prevent submit default & get user's recipe request
-	const options = {
-		method: 'GET',
-		headers: {
-			'X-RapidAPI-Key': '3d90c14bdfmsh4601b3922b31ffep175ce4jsne52c8cb50a63',
-			'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
-		}
-	};
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '5c72fa5e49mshddc6f1d2831d5f9p13c282jsn76cbd9c73540',
+		//'3d90c14bdfmsh4601b3922b31ffep175ce4jsne52c8cb50a63',
+		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+	}
+};
 
 formSubmit.addEventListener('submit', getRecipeRequest)
 
 function getRecipeRequest (e){
 	e.preventDefault()
 	
-	// e.target.reset()
-	fetchRecipes();
+	let requestValue = e.target.children.enterIngredient
+	fetchRecipes(requestValue.value);
 }
 	
-async function fetchRecipes() {
-	await fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${requestValue}`, options)
+async function fetchRecipes(query) {
+	await fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${query}`, options)
 		.then((response) => response.json())
 		.then(function (response) {
 			removeElement();
 	        let a = response.results
 	        a.forEach(x => {
-	            addToHtml(ul, 'h4', x.name)
+	            addToHtml(ul, 'h3', x.name)
 	            // console.log(' ')
 				addToHtml(ul, 'p', x.yields)
-				
+				addToHtml(ul, 'h4', 'Ingredients')
 	            pickIngredients(x.sections)
-	            // console.log(' ')
+	            addToHtml(ul, 'br')
+
+				addToHtml(ul, 'h4', 'Procedure')
 	            pickInstructions(x.instructions)
+				addToHtml(ul, 'p', '************************************************')
+				addToHtml(ul, 'br')
 	            
 	            console.log('----------------------------------------------------------------------- ')
 				
 				
 	        }) 
-	        console.log(a)
+	        
 	    })
 		.catch(err => console.error(err));		
 }
@@ -66,9 +68,9 @@ function pickInstructions(aray) {
 }
 fetchRecipes()
 
-function addToHtml(parNode, eleMent = 'p', dataContent){
+function addToHtml(parNode, eleMent = 'p', dataContent=null){
 	const node = document.createElement(eleMent);
-	node.textContent = dataContent;
+	if (dataContent!==null){node.textContent = dataContent;}
 	parNode.appendChild(node);
 }
 const displayOnClick = document.querySelector('#submit')

@@ -1,5 +1,5 @@
 .main{
-    background-image: url("assets/background-image2.jpg");
+    background-image: url("./assets/background-image2.jpg");
     background-color: #cccccc; 
     height: 100vh; 
     background-position: center; 
@@ -73,5 +73,6 @@ label{
 }
 div#ingredients{
     /* display: none; */
+    background-color: rgb(221, 215, 215);
     overflow: scroll;
 }
