@@ -58,4 +58,10 @@ function mappingThings(a,c='raw_text'){
         addToHtml(ul, 'P', b[c])
     }) 
 }
+function pickInstructions(aray) {
+	aray.forEach(d => {console.log(d.display_text)}) 
+    aray.forEach(d => {addToHtml(ul, 'p', d.display_text)}) 
+    // console.log(" ")
+}
+
 
