@@ -27,8 +27,8 @@ async function fetchRecipes() {
 	await fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${requestValue}`, options)
 		.then((response) => response.json())
 		.then(function (response) {
-	        let a = response.results
-	        a.forEach(x => {
+	        let all = response.results
+	        all.forEach(x => {
 	            addToHtml(ul, 'h4', x.name)
 	            // console.log(' ')
 				addToHtml(ul, 'p', x.yields)
@@ -41,8 +41,15 @@ async function fetchRecipes() {
 				
 				
 	        }) 
-	        console.log(a)
+	        console.log(all)
 	    })
 		.catch(err => console.error(err));		
+}
+
+function pickIngredients(x){
+    x.map(d => {
+        mappingThings(d.components)
+    }) 
+    
 }
 
