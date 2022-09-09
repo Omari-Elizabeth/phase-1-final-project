@@ -63,5 +63,12 @@ function pickInstructions(aray) {
     aray.forEach(d => {addToHtml(ul, 'p', d.display_text)}) 
     // console.log(" ")
 }
+fetchRecipes()
+
+function addToHtml(parNode, eleMent = 'p', dataContent){
+	const node = document.createElement(eleMent);
+	node.textContent = dataContent;
+	parNode.appendChild(node);
+}
 
 
