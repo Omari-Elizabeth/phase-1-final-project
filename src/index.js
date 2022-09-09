@@ -27,7 +27,7 @@ async function fetchRecipes() {
 	await fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${requestValue}`, options)
 		.then((response) => response.json())
 		.then(function (response) {
-	        let all = response.results
+	        let a = response.results
 	        a.forEach(x => {
 	            addToHtml(ul, 'h4', x.name)
 	            // console.log(' ')
@@ -70,5 +70,10 @@ function addToHtml(parNode, eleMent = 'p', dataContent){
 	node.textContent = dataContent;
 	parNode.appendChild(node);
 }
-
+const displayOnClick = document.querySelector('#submit')
+displayOnClick.addEventListener('click', displayRecipe);
+function displayRecipe(){
+	displayOnClick.style.display="block";
+	// addToHtml(ul, 'P', b[c])
+}
 
