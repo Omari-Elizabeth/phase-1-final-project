@@ -28,7 +28,7 @@ async function fetchRecipes() {
 		.then((response) => response.json())
 		.then(function (response) {
 	        let all = response.results
-	        all.forEach(x => {
+	        a.forEach(x => {
 	            addToHtml(ul, 'h4', x.name)
 	            // console.log(' ')
 				addToHtml(ul, 'p', x.yields)
@@ -41,7 +41,7 @@ async function fetchRecipes() {
 				
 				
 	        }) 
-	        console.log(all)
+	        console.log(a)
 	    })
 		.catch(err => console.error(err));		
 }
@@ -51,5 +51,11 @@ function pickIngredients(x){
         mappingThings(d.components)
     }) 
     
+}
+
+function mappingThings(a,c='raw_text'){
+    a.map(b => {
+        addToHtml(ul, 'P', b[c])
+    }) 
 }
 
