@@ -1,5 +1,5 @@
-# Tasty Tables Delight
-# A website for meals recipe
+# Tasty_Tables_Delight
+# A webpage for meals recipe
 
 ​
 ##### By Elizabeth Omari 
@@ -37,7 +37,7 @@
 ​
 * Javascript - this was used to add functionality  
 ​
-[Go Back to the top](#Tasty Tables Delight)
+[Go Back to the top](#Tasty_Tables_Delight)
 ​
 ## Licence
 ​
@@ -63,9 +63,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ​
-[Go Back to the top](#Tasty Tables Delight)
+[Go Back to the top](# Tasty_Tables_Delight)
 ​
 ## Authors Info
 Linked - [Elizabeth Omari](https://www.linkedin.com/in/elizabeth-omari-1a90b9103/)
 ​
-[Go Back to the top](#Tasty Tables Delight)
+[Go Back to the top](#Tasty_Tables_Delight)
