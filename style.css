@@ -1,3 +1,4 @@
+
 .main{
     background-image: url("./assets/background-image2.jpg");
     background-color: #cccccc; 
@@ -23,6 +24,7 @@
 #left-content{
     float: left;
     width: 60%;
+    margin-left: 30px;
 }
 #right-content:after {
     content: "";
@@ -33,23 +35,49 @@
     width: 600px;
 }
 
-.variety{
+/* .variety{
     margin-top: 75px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    margin-left: 300px;
 }
 #plate{
-    width: 130px;
+    width: 180px;
+}
+#bigplate{
+    width: 120px;
+    margin-top: 20px;
+
+} */
+marquee{
+    margin-bottom: 30px;
+    font-style: italic;
+    color: rgb(243, 116, 6);
+}
+.tagline{
+    margin-top: 70px;
+    color:  rgb(94, 91, 91);
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 h1{
     padding: 50px;
-    text-align: justify;
-    font-size: xx-large;
+    text-align: center;
+    font-size: 65px;
+    color: rgb(236, 120, 18);
 }
-nav{
+label{
+    font-size: 28px;
+    color:  rgb(29, 29, 29);
+}
+h2, label{
+    color:  rgb(94, 91, 91);
+}
+/* nav{
     margin-bottom: 40px;
-}
+} */
 button{
     border: none;
     border-radius: 40px;
@@ -70,6 +98,7 @@ label{
     color: rgb(236, 120, 18);
     font-size: 22px;
     font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 div#ingredients{
     /* display: none; */
